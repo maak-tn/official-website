@@ -1,4 +1,4 @@
-# Diva Software
+# MAAK CORP SUARL
 
 The official website for MAAK CORP SUARL.
 
