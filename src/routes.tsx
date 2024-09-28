@@ -15,7 +15,7 @@ const publicRoutes: RouteObject[] = [
         children: [{ index: true, element: <Home /> }],
     },
     {
-        path: '/contact',
+        path: '/get-in-touch',
         element: <AppContainer />,
         errorElement: <ErrorFallback />,
         children: [{ index: true, element: <Contact /> }],

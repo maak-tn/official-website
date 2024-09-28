@@ -3,27 +3,27 @@ import { Outlet, useNavigate } from 'react-router-dom'
 import { NextUIProvider, Spinner } from '@nextui-org/react'
 import { cn } from '../../../common/utils'
 import Footer from '../../partials/Footer'
+import NavBar from '../../partials/Navbar'
+import FallBackElement from '../FallBack'
 
 export function AppContainer({ className = '' }) {
     const navigate = useNavigate()
 
     return (
         <NextUIProvider navigate={navigate}>
-
             <div className={cn('w-full h-screen', className)}>
-                <React.Suspense
-                    fallback={
-                        <div className="flex items-center justify-center w-full h-full">
-                            <Spinner />
-                        </div>
-                    }
-                >
+
+                <NavBar />
+
+                <React.Suspense fallback={<FallBackElement />}>
+
                     <Outlet />
+
                 </React.Suspense>
 
                 <Footer />
-            </div>
 
+            </div>
         </NextUIProvider >
     )
 }

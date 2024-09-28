@@ -1,23 +1,21 @@
+import { Button } from "@nextui-org/react";
+
 export default function Home() {
 
 
     return (
-        <>
-            <CentredLayout>
-                <section className="flex flex-row justify-between gap-8 my-16 dark">
-                    <div className="flex flex-col gap-8">
-                        <h1 className="max-w-2xl mb-4 text-6xl font-semibold tracking-tight text-left text-black dark:text-white">
-                            Design. Develop. Deliver.
-                        </h1>
-                        <p className="max-w-2xl mb-6 text-lg font-light text-left text-gray-300 ">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia vero officiis explicabo accusamus eius impedit soluta doloremque mollitia veniam officia, quam unde omnis, ipsum incidunt dolorum sint sapiente minima perferendis at fuga dolor natus! Aperiam molestiae ut ipsa nisi praesentium.
-                        </p>
+        <div className="flex flex-col items-center justify-center h-4/5">
+            <section className="dark max-w-[var(--max-content-width)] mx-auto flex flex-col gap-8">
+                <h1 className="text-6xl font-semibold tracking-tight text-left text-black dark:text-white">
+                    Plan. Develop. Ship.
+                </h1>
+                <h3>Crafted with precision, delivered with speed</h3>
+                <p className="text-lg font-light text-left text-gray-300 max-w-[800px]">
+                    We're committed to turning your ideas into reality. Our streamlined process ensures that every project is executed with precision and delivered on time. From initial planning to final deployment, we're dedicated to providing exceptional results.
+                </p>
 
-                        <Button variant="flat" color="warning" radius="lg" size="lg" className="w-fit">Contact Us</Button>
-                    </div>
-                    <Image src="images/hero-section/placeholder.jpg" width={400} />
-                </section>
-            </CentredLayout>
-        </>
+                <Button variant="solid" color="default" radius="lg" size="lg" className="w-fit">Contact Us</Button>
+            </section>
+        </div>
     )
 }
