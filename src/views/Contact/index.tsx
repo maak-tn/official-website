@@ -1,4 +1,4 @@
-import { Button, Divider, Input, Link, Snippet, Textarea } from "@nextui-org/react";
+import { Button, Divider, Input, Snippet, Textarea } from "@nextui-org/react";
 import { Helmet } from "react-helmet-async";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { VscGithubAlt } from "react-icons/vsc";

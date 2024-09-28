@@ -1,6 +1,6 @@
 import React from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
-import { NextUIProvider, Spinner } from '@nextui-org/react'
+import { NextUIProvider } from '@nextui-org/react'
 import { cn } from '../../../common/utils'
 import Footer from '../../partials/Footer'
 import NavBar from '../../partials/Navbar'
