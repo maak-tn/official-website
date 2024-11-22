@@ -3,10 +3,12 @@ import { Helmet } from "react-helmet-async";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { VscGithubAlt } from "react-icons/vsc";
 import CenteredLayout from "../../components/ui/centredLayout";
+import BackgroundDots from "../../components/ui/Background";
 
 export default function Contact() {
     return (
         <div className="px-4 mt-16 lg:px-0">
+            <BackgroundDots />
             <Helmet>
                 <title>Get in touch</title>
             </Helmet>

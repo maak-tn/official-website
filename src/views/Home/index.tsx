@@ -1,10 +1,12 @@
 import { Button, Link } from "@nextui-org/react";
+import BackgroundDots from "../../components/ui/Background";
 
 export default function Home() {
 
 
     return (
         <div className="flex flex-col items-center justify-center px-4 h-4/5 lg:px-0">
+            <BackgroundDots />
             <section className="dark max-w-[var(--max-content-width)] mx-auto flex flex-col gap-8">
                 <h1 className="font-semibold leading-tight tracking-tight text-left text-black lg:leading-none lg:text-6xl text-7xl dark:text-white">
                     Plan. Develop. Ship.
