@@ -1,4 +1,4 @@
-import { Button, Divider, Input, Snippet, Textarea } from "@nextui-org/react";
+import { Button, Divider, Input, Link, Snippet, Textarea } from "@nextui-org/react";
 import { Helmet } from "react-helmet-async";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { VscGithubAlt } from "react-icons/vsc";
@@ -6,7 +6,7 @@ import CenteredLayout from "../../components/ui/centredLayout";
 
 export default function Contact() {
     return (
-        <div className="mt-16">
+        <div className="px-4 mt-16 lg:px-0">
             <Helmet>
                 <title>Get in touch</title>
             </Helmet>
@@ -19,10 +19,10 @@ export default function Contact() {
                     </h1>
 
                     <div className="flex flex-row justify-center gap-2">
-                        <Button isIconOnly color="default" variant="ghost" aria-label="LinkedIn" href="https://www.linkedin.com/company/maak-corp">
+                        <Button isIconOnly color="default" variant="ghost" aria-label="LinkedIn" as={Link} href="https://www.linkedin.com/in/aymkh">
                             <FaLinkedinIn />
                         </Button>
-                        <Button isIconOnly color="default" variant="ghost" aria-label="GitHub">
+                        <Button isIconOnly color="default" variant="ghost" aria-label="GitHub" as={Link} href="https:/github.com/aymkh">
                             <VscGithubAlt />
                         </Button>
                     </div>
@@ -33,7 +33,7 @@ export default function Contact() {
                 <form
                     name="maak-clients-submissions"
                     method="POST"
-                    className='lg:max-w-[500px] w-4/5 mx-auto'
+                    className='lg:max-w-[500px] w-full mx-auto'
                     data-netlify="true"
                     netlify-honeypot="bot-field"
                 >

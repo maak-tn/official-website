@@ -5,7 +5,9 @@ export default function NavBar() {
     return (
         <Navbar>
             <NavbarBrand>
-                <Image src='https://avatars.githubusercontent.com/u/115502126?s=200&v=4' width={50} />
+                <Link href={'/'}>
+                    <Image src='https://avatars.githubusercontent.com/u/115502126?s=200&v=4' width={50} />
+                </Link>
             </NavbarBrand>
 
             <NavbarContent className="hidden gap-4 sm:flex" justify="center">
