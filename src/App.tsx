@@ -4,6 +4,7 @@ import LoadingFallback from "./components/ui/Loader"
 import { ErrorBoundary } from "react-error-boundary"
 import { ErrorFallback } from "./components/ui/ErrorFallback"
 import { Helmet, HelmetProvider } from "react-helmet-async"
+import BackgroundDots from "./components/ui/Background"
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             titleTemplate="MAAK CORP | %s"
             defaultTitle=""
           />
+          <BackgroundDots />
           <RouterProvider
             router={router}
             fallbackElement={<LoadingFallback />}
