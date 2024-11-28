@@ -3,10 +3,10 @@ import { VelocityScroll } from "../../components/ScrollingText";
 
 export default function Home() {
     return (
-        <div className="flex flex-col items-center justify-center px-4 max-w-[var(--max-content-width)] mx-auto lg:px-0">
+        <div className="flex flex-col items-center justify-center lg:max-w-[var(--max-content-width)] lg:mx-auto lg:px-0 px-4 h-screen">
 
-            <section id="heroSection" className="flex flex-col justify-center items-center w-full gap-12 min-h-[500px] py-16">
-                <h1 className="block font-bold leading-tight text-center text-black tracking-tightr lg:leading-none lg:text-8xl text-7xl">
+            <section id="heroSection" className="flex flex-col items-center justify-center w-full gap-12">
+                <h1 className="block text-6xl font-bold leading-tight tracking-tighter text-center text-black lg:leading-none lg:text-8xl">
                     Software Development <br /> Done Right
                 </h1>
 
@@ -17,11 +17,13 @@ export default function Home() {
                     </p>
                 </div>
 
-                <div className="relative flex flex-col items-center w-full group">
+                <div className="relative flex-col items-center hidden w-full lg:flex group">
                     <Button variant="solid" color="default" radius="lg" size="lg" className="absolute z-30 w-full text-white scale-150 bg-black lg:w-fit" as={Link} href="/get-in-touch">Get In Touch</Button>
 
                     <VelocityScroll text="DO IT, DO IT NOW!" className="text-gray-400 opacity-0 group-hover:opacity-100" />
                 </div>
+
+                <Button variant="solid" color="default" radius="lg" size="lg" className="w-full text-white bg-black 0 lg:hidden lg:w-fit" as={Link} href="/get-in-touch">Get In Touch</Button>
             </section>
 
 
