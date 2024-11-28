@@ -17,9 +17,9 @@ export default {
     require('@tailwindcss/typography'),
     nextui({
       prefix: 'ui',
-      defaultTheme: 'dark',
+      defaultTheme: 'light',
       addCommonColors: false,
-      themes: { light: {}, dark: {} },
+      themes: { light: {} },
     }),
   ]
 }

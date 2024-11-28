@@ -19,7 +19,19 @@ const publicRoutes: RouteObject[] = [
         element: <AppContainer />,
         errorElement: <ErrorFallback />,
         children: [{ index: true, element: <Contact /> }],
-    }
+    },
+    {
+        path: 'pricing',
+        element: <AppContainer />,
+        errorElement: <ErrorFallback />,
+        children: [{ index: true, element: <Contact /> }]
+    },
+    {
+        path: 'work',
+        element: <AppContainer />,
+        errorElement: <ErrorFallback />,
+        children: [{ index: true, element: <Contact /> }]
+    },
 ]
 
 export const router = createBrowserRouter([...publicRoutes])
