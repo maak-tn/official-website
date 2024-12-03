@@ -52,7 +52,7 @@ export default function Home() {
 
                 <h1 className="text-6xl font-bold capitalize">How we do it?</h1>
 
-                <div id="processGrid" className="!hidden lg:grid">
+                <div id="processGrid" className="!hidden lg:!grid">
                     {/* ** STEP 1 ** */}
                     <ProcessCard id="step1">
                         <div>
