@@ -5,7 +5,7 @@ export const NAV = [
     },
     {
         label: 'Pricing',
-        route: '/about',
+        route: '/pricing',
     },
     {
         label: 'Work',

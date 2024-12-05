@@ -2,6 +2,7 @@ import { Button, Link } from "@nextui-org/react";
 import { VelocityScroll } from "../../components/ScrollingText";
 import './index.css';
 import styled from "styled-components";
+import BackgroundDots from "../../components/ui/Background";
 
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center lg:max-w-[var(--max-content-width)] lg:mx-auto lg:px-0 px-4 gap-28">
 
             <section id="heroSection" className="flex flex-col items-center justify-center w-full gap-12 min-h-[900px]">
+                <BackgroundDots />
                 <h1 className="block text-6xl font-bold leading-tight tracking-tighter text-center text-black lg:leading-none lg:text-8xl">
                     Software Development <br /> Done Right
                 </h1>
@@ -259,7 +261,7 @@ const ProcessCard = styled.div`
         width: 100%;
         height: 100%;
         z-index: 10;
-        
+
         .noise {
             background: 
                 linear-gradient(20deg, rebeccapurple, transparent), 
