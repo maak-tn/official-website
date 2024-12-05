@@ -244,9 +244,8 @@ const ProcessCard = styled.div`
     justify-content: start;
     align-items: start;
     gap: 1rem;
-    background: #fbfcfc;
-    border-radius: 0%.5;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    background: #fff;
+    border-radius: 0.5rem;
     position: relative;
 
     h1 {

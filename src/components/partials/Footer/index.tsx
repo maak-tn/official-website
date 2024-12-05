@@ -1,3 +1,4 @@
+import { Button, Link } from "@nextui-org/react";
 import { NAV } from "../../../common/data"
 
 export default function Footer() {
@@ -48,9 +49,9 @@ export default function Footer() {
                     {
                         NAV.map((item: any, index: number) => (
                             <div className="px-5 py-2" key={index}>
-                                <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                                <Button as={Link} variant="light" size="sm" href={item.route}>
                                     {item.label}
-                                </a>
+                                </Button>
                             </div>
                         ))
                     }
