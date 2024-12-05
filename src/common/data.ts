@@ -4,7 +4,15 @@ export const NAV = [
         route: '/',
     },
     {
-        label: 'Contact',
+        label: 'Pricing',
+        route: '/pricing',
+    },
+    {
+        label: 'Work',
+        route: '/blog',
+    },
+    {
+        label: 'Get in touch',
         route: '/get-in-touch',
     },
 ]

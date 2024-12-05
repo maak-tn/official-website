@@ -1,33 +1,18 @@
-import { Button, Divider, Input, Link, Snippet, Textarea } from "@nextui-org/react";
+import { Button, Divider, Input, Snippet, Textarea } from "@nextui-org/react";
 import { Helmet } from "react-helmet-async";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { VscGithubAlt } from "react-icons/vsc";
 import CenteredLayout from "../../components/ui/centredLayout";
-import BackgroundDots from "../../components/ui/Background";
 
 export default function Contact() {
     return (
         <div className="px-4 mt-16 lg:px-0">
-            <BackgroundDots />
             <Helmet>
                 <title>Get in touch</title>
             </Helmet>
 
             <CenteredLayout>
                 <div className="flex flex-col items-center gap-4">
-                    <h1>
-                        E-mail us @
-                        <Snippet variant="bordered" symbol="">contact@maak-corp.tn</Snippet>
-                    </h1>
-
-                    <div className="flex flex-row justify-center gap-2">
-                        <Button isIconOnly color="default" variant="ghost" aria-label="LinkedIn" as={Link} href="https://www.linkedin.com/in/aymkh">
-                            <FaLinkedinIn />
-                        </Button>
-                        <Button isIconOnly color="default" variant="ghost" aria-label="GitHub" as={Link} href="https:/github.com/aymkh">
-                            <VscGithubAlt />
-                        </Button>
-                    </div>
+                    <span>E-mail us @</span>
+                    <Snippet variant="bordered" symbol="">contact@maak-corp.tn</Snippet>
                 </div>
 
                 <Divider className="my-12" />
@@ -57,7 +42,7 @@ export default function Contact() {
                         className="w-full my-4"
                         name='client-message'
                     />
-                    <input className='w-full' type="submit" value="Submit message" />
+                    <Button className='w-full' type="submit" color="warning">Send</Button>
                 </form >
             </CenteredLayout>
         </div>
