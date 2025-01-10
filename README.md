@@ -1,8 +1,3 @@
-# MAAK CORP SUARL
+# MAAK CORP
 
-The official website for MAAK CORP SUARL.
-
-Built using
-- Reactjs
-- NextUI
-- TailwindCss
+This repositry holds the source code for the official MAAK CORP website.
