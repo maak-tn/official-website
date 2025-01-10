@@ -1,8 +1,11 @@
+import Nav from '@/components/nav'
 import React from 'react'
 
 function page() {
     return (
-        <div>page</div>
+        <div>
+            <Nav />
+        </div>
     )
 }
 
