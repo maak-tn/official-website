@@ -20,3 +20,12 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.hiddenScroll {
+  scrollbar-width: none;
+}
+
+.hiddenScroll::-webkit-scrollbar {
+  /* Safari and Chrome */
+  display: none;
+}
