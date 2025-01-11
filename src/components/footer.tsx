@@ -51,9 +51,8 @@ function Footer() {
                 <button className='border border-border p-4 rounded-full capitalize'>get in touch ↗️</button>
                 <div className="flex justify-center mt-8 space-x-6">
                     {
-                        SOCIALS.map((item: any, index: number) => (
+                        SOCIALS.map((item: TSocialsLinks, index: number) => (
                             <a key={index} target="_blank" href={item.href} className="hover:text-gray-500">
-                                <span className="sr-only">{item.label}</span>
                                 {item.icon}
                             </a>
                         ))
