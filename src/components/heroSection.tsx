@@ -1,15 +1,9 @@
+import { styles } from '@/app/(root)/page'
 import React from 'react'
-
-// Used to get the final height of the hero section
-const styles = {
-    heroSection: {
-        height: 'calc(100vh - var(--navbar-height))'
-    }
-};
 
 function HeroSection() {
     return (
-        <section className='flex justify-between flex-col px-4' style={styles.heroSection}>
+        <section className='flex justify-between flex-col px-4' style={styles.sharedSectionLayout}>
             <div className='h-full flex flex-col justify-center w-full'>
                 <p className='lg:font-semibold leading-snug tracking-wide uppercase lg:text-8xl text-3xl lg:text-left text-center'>
                     👋 I'm aymen khedhriya
