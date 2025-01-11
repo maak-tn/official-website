@@ -1,8 +1,9 @@
+import { TSocialsLinks } from '@/app/lib/type';
 import React from 'react'
 
 function Footer() {
 
-    const SOCIALS = [
+    const SOCIALS: TSocialsLinks[] = [
         {
             name: 'GitHub',
             href: 'https://github.com/aymkh',

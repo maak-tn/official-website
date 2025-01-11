@@ -3,7 +3,7 @@ import React from 'react'
 
 function ProcessCard({ title, duration, description, customList }: TProcessItem) {
     return (
-        <div className='border border-[#303436] rounded-lg p-8 flex flex-col gap-8 min-w-[460px]'>
+        <div className='border border-border rounded-lg p-8 flex flex-col gap-8 min-w-[460px]'>
             <div>
                 <h1 className='text-2xl uppercase font-normal'>{title}</h1>
                 <span className='font-thin text-sm'>{duration}</span>

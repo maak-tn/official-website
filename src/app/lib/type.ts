@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 export type TNavItems = {
     name: string;
     link: string;
@@ -14,3 +16,9 @@ export type TProcessItem = {
     description: string;
     customList: string[];
 };
+
+export type TSocialsLinks = {
+    name: string;
+    href: string;
+    icon: ReactElement;
+}
