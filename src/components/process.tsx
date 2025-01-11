@@ -2,6 +2,7 @@ import { styles } from '@/app/(root)/page'
 import React from 'react'
 import ProcessCard from './ui/processCard'
 import { TProcessItem } from '@/app/lib/type'
+import SectionTitle from './ui/sectionTitle'
 
 function Process() {
 
@@ -54,8 +55,8 @@ function Process() {
     ]
 
     return (
-        <section className='px-4 py-24 w-full flex lg:flex-row flex-col lg:gap-0 gap-0 justify-between items-start' style={styles.sharedSectionLayout}>
-            <h1 className='uppercase text-3xl font-thin lg:min-w-[800px]'>How I do it?</h1>
+        <section className='px-4 w-full flex lg:flex-row flex-col lg:gap-0 gap-8 justify-between lg:items-center' style={styles.sharedSectionLayout}>
+            <SectionTitle title='how i do ito ?' />
             <div className='w-full h-full flex flex-row gap-8 overflow-x-scroll hiddenScroll '>
                 {
                     process.map((item: TProcessItem, index: number) => (<ProcessCard key={index} {...item} />))
