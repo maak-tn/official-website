@@ -58,7 +58,7 @@ function Process() {
             <h1 className='uppercase text-3xl font-thin lg:min-w-[800px]'>How I do it?</h1>
             <div className='w-full h-full flex flex-row gap-8 overflow-x-scroll hiddenScroll '>
                 {
-                    process.map((item, index) => (<ProcessCard key={index} {...item} />))
+                    process.map((item: TProcessItem, index: number) => (<ProcessCard key={index} {...item} />))
                 }
             </div>
         </section>

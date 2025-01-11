@@ -1,6 +1,7 @@
+import { TProcessItem } from '@/app/lib/type'
 import React from 'react'
 
-function ProcessCard({ title, duration, description, customList }: { title: string, duration: string, description: string, customList: string[] }) {
+function ProcessCard({ title, duration, description, customList }: TProcessItem) {
     return (
         <div className='border border-[#303436] rounded-lg p-8 flex flex-col gap-8 min-w-[400px]'>
             <div>

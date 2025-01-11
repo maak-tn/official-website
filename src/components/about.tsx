@@ -1,9 +1,21 @@
-'use client';
 import { styles } from '@/app/(root)/page';
 import React from 'react'
-import styled from 'styled-components'
+import NumberCard from './ui/numberCard';
+import { TStatsCard } from '@/app/lib/type';
 
 function About() {
+
+    const stats: TStatsCard[] = [
+        {
+            label: '18+',
+            description: 'Completed Projects'
+        },
+        {
+            label: '6+',
+            description: 'Years of Exprience'
+        }
+    ]
+
     return (
         <section className='px-4 py-24 w-full flex lg:flex-row flex-col lg:gap-0 gap-8 justify-between items-start' style={styles.sharedSectionLayout}>
             <h1 className='uppercase text-3xl font-thin lg:min-w-[800px]'>What I do?</h1>
@@ -13,33 +25,15 @@ function About() {
                 </p>
 
                 <div className='flex lg:flex-row flex-col lg:gap-24 gap-8 items-center'>
-                    <NumbersCard>
-                        <h2>18+</h2>
-                        <p>Completed Projects</p>
-                    </NumbersCard>
-                    <NumbersCard>
-                        <h2>6+</h2>
-                        <p>Years of Experience</p>
-                    </NumbersCard>
+                    {
+                        stats.map((item: TStatsCard, index: number) => (
+                            <NumberCard {...item} key={index} />
+                        ))
+                    }
                 </div>
             </div>
         </section>
     )
 }
-
-const NumbersCard = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 1.2rem;
-    font-weight: 500;
-
-    h2{
-        font-size: 8rem;
-        font-weight: 400;
-    }
-`;
 
 export default About
