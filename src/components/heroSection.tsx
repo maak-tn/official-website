@@ -1,9 +1,8 @@
-import { styles } from '@/app/(root)/page'
 import React from 'react'
 
 function HeroSection() {
     return (
-        <section className='flex justify-between flex-col px-4' style={styles.sharedSectionLayout}>
+        <section className='flex justify-between flex-col px-4 h-sahredSection'>
             <div className='flex flex-col justify-center w-full lg:h-[800px] h-screen'>
                 <p className='lg:font-thin leading-snug lg:leading-normal tracking-wide uppercase lg:text-8xl text-3xl lg:text-left text-center'>
                     👋 I'm aymen khedhriya

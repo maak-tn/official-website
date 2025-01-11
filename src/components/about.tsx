@@ -1,4 +1,3 @@
-import { styles } from '@/app/(root)/page';
 import React from 'react'
 import NumberCard from './ui/numberCard';
 import { TStatsCard } from '@/lib/type';
@@ -18,7 +17,7 @@ function About() {
     ]
 
     return (
-        <section className='px-4 lg:py-0 py-12 w-full flex lg:flex-row flex-col lg:gap-0 gap-8 justify-between lg:items-center' style={styles.sharedSectionLayout}>
+        <section className='px-4 lg:py-0 py-12 w-full flex lg:flex-row flex-col lg:gap-0 gap-8 justify-between lg:items-center h-sahredSection'>
             <SectionTitle title='what i do ?' />
             <div className='w-full h-full flex flex-col gap-24'>
                 <p className='lg:text-2xl lg:leading-loose lg:text-left text-justify lg:tracking-wide'>

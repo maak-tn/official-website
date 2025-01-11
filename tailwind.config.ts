@@ -13,6 +13,9 @@ export default {
         foreground: "var(--foreground)",
         border: '#303436'
       },
+      height: {
+        sahredSection: 'calc(100vh - var(--navbar-height))'
+      }
     },
   },
   plugins: [],

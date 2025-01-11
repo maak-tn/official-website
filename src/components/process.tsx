@@ -1,4 +1,3 @@
-import { styles } from '@/app/(root)/page'
 import React from 'react'
 import ProcessCard from './ui/processCard'
 import { TProcessItem } from '@/lib/type'
@@ -55,7 +54,7 @@ function Process() {
     ]
 
     return (
-        <section className='px-4 lg:py-0 py-12 w-full flex lg:flex-row flex-col lg:gap-0 gap-8 lg:justify-between lg:items-center' style={styles.sharedSectionLayout}>
+        <section className='px-4 lg:py-0 py-12 w-full flex lg:flex-row flex-col lg:gap-0 gap-8 lg:justify-between lg:items-center h-sahredSection'>
             <SectionTitle title='how i do ito ?' />
             <div className='w-full flex flex-row gap-8 overflow-x-scroll hiddenScroll '>
                 {
