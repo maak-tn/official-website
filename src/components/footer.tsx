@@ -45,9 +45,9 @@ function Footer() {
 
     return (
         <footer className='mt-24'>
-            <div className='border border-t border-b border-l-0 border-r-0  border-border py-12 flex flex-col gap-6 items-center'>
+            <div className='border border-t border-b border-l-0 border-r-0  border-border py-12 lg:px-0 px-4 flex flex-col gap-6 items-center'>
                 <h3 className='font-thin uppercase text-lg'>have a project in mind?</h3>
-                <h1 className='font-bold uppercase text-7xl'>Let's work together</h1>
+                <h1 className='font-bold uppercase lg:text-7xl text-5xl text-center'>Let's work together</h1>
                 <button className='border border-border p-4 rounded-full capitalize'>get in touch ↗️</button>
                 <div className="flex justify-center mt-8 space-x-6">
                     {
