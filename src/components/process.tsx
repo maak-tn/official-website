@@ -55,9 +55,9 @@ function Process() {
     ]
 
     return (
-        <section className='px-4 w-full flex lg:flex-row flex-col lg:gap-0 gap-8 justify-between lg:items-center' style={styles.sharedSectionLayout}>
+        <section className='px-4 lg:py-0 py-12 w-full flex lg:flex-row flex-col lg:gap-0 gap-8 lg:justify-between lg:items-center' style={styles.sharedSectionLayout}>
             <SectionTitle title='how i do ito ?' />
-            <div className='w-full h-full flex flex-row gap-8 overflow-x-scroll hiddenScroll '>
+            <div className='w-full flex flex-row gap-8 overflow-x-scroll hiddenScroll '>
                 {
                     process.map((item: TProcessItem, index: number) => (<ProcessCard key={index} {...item} />))
                 }
