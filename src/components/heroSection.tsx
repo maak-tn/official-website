@@ -4,7 +4,7 @@ import React from 'react'
 function HeroSection() {
     return (
         <section className='flex justify-between flex-col px-4' style={styles.sharedSectionLayout}>
-            <div className='h-full flex flex-col justify-center w-full'>
+            <div className='flex flex-col justify-center w-full lg:h-[800px] h-screen'>
                 <p className='lg:font-semibold leading-snug tracking-wide uppercase lg:text-8xl text-3xl lg:text-left text-center'>
                     👋 I'm aymen khedhriya
                     <br />
@@ -14,7 +14,7 @@ function HeroSection() {
                 </p>
             </div>
 
-            <div className='flex flex-col items-start gap-4 lg:justify-between lg:gap-0 lg:flex-row'>
+            <div className='hidden lg:flex flex-col items-start gap-4 lg:justify-between lg:gap-0 lg:flex-row'>
                 <p>
                     Based in TUNISIA
                     <br />
