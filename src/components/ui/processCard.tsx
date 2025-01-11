@@ -1,4 +1,4 @@
-import { TProcessItem } from '@/app/lib/type'
+import { TProcessItem } from '@/lib/type'
 import React from 'react'
 
 function ProcessCard({ title, duration, description, customList }: TProcessItem) {

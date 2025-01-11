@@ -1,7 +1,7 @@
 import { styles } from '@/app/(root)/page';
 import React from 'react'
 import NumberCard from './ui/numberCard';
-import { TStatsCard } from '@/app/lib/type';
+import { TStatsCard } from '@/lib/type';
 import SectionTitle from './ui/sectionTitle';
 
 function About() {

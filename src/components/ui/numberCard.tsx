@@ -1,4 +1,4 @@
-import { TStatsCard } from '@/app/lib/type'
+import { TStatsCard } from '@/lib/type'
 import React from 'react'
 
 function NumberCard({ label, description }: TStatsCard) {

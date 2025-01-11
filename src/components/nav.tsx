@@ -1,4 +1,4 @@
-import { TNavItems } from '@/app/lib/type';
+import { TNavItems } from '@/lib/type';
 import Link from 'next/link';
 import React from 'react'
 

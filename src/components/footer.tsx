@@ -1,4 +1,4 @@
-import { TSocialsLinks } from '@/app/lib/type';
+import { TSocialsLinks } from '@/lib/type';
 import React from 'react'
 
 function Footer() {

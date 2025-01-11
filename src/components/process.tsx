@@ -1,7 +1,7 @@
 import { styles } from '@/app/(root)/page'
 import React from 'react'
 import ProcessCard from './ui/processCard'
-import { TProcessItem } from '@/app/lib/type'
+import { TProcessItem } from '@/lib/type'
 import SectionTitle from './ui/sectionTitle'
 
 function Process() {
