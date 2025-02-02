@@ -54,7 +54,7 @@ function Process() {
     ]
 
     return (
-        <section className='px-4 lg:py-0 py-12 w-full flex lg:flex-row flex-col lg:gap-0 gap-8 lg:justify-between lg:items-center h-sahredSection'>
+        <section className='px-4 max-w-[var(--max-width)] flex flex-col gap-24 items-start lg:py-24 py-16 lg:px-0 mx-auto'>
             <SectionTitle title='how i do ito ?' />
             <div className='w-full flex flex-row gap-8 overflow-x-scroll hiddenScroll '>
                 {
