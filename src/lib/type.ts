@@ -22,3 +22,12 @@ export type TSocialsLinks = {
     href: string;
     icon: ReactElement;
 }
+
+export type TProject = {
+    title: string;
+    description: string;
+    link: string;
+    image: string;
+    tags: string[];
+    techStack: string[];
+}
