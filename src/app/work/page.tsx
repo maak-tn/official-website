@@ -12,6 +12,14 @@ function page() {
             image: '/projects/planifi.svg',
             tags: ["SAAS", "Tender Management", "Bidding"],
             techStack: ['Angular', 'NestJS', 'MySQL', 'AWS', 'Digital Ocean', 'Docker']
+        },
+        {
+            title: 'GitHub Groups',
+            description: 'A Chrome extension to manage your GitHub repositories with ease',
+            link: 'https://ghg.tn',
+            image: '/projects/ghg.png',
+            tags: ["Feature", "GitHub", "Chrome Extension"],
+            techStack: ['HTML', 'CSS', 'JavaScript']
         }
     ];
 
