@@ -14,8 +14,12 @@ function Nav() {
             link: '/about'
         },
         {
-            name: 'Work',
+            name: 'Projects',
             link: '/work'
+        },
+        {
+            name: 'Services',
+            link: '/services'
         }
     ];
 
