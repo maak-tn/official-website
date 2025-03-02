@@ -13,7 +13,7 @@ function HeroSection() {
                 </p>
             </div>
 
-            <div className='hidden lg:flex flex-col items-start gap-4 lg:justify-between lg:gap-0 lg:flex-row text-xl font-thin lg:pb-4'>
+            <div className='hidden lg:flex flex-col items-start gap-4 lg:justify-between lg:gap-0 lg:flex-row text-xl font-thin lg:pb-12'>
                 <p>
                     Based in <a href="https://en.wikipedia.org/wiki/Tunisia" target='_blank' className='text-yellow-400 underline'>TUNISIA</a>
                     <br />
