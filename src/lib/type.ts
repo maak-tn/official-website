@@ -31,3 +31,12 @@ export type TProject = {
     tags: string[];
     techStack: string[];
 }
+
+export type TService = {
+    title: string;
+    description: string;
+    client: string;
+    image: string;
+    tags: string[];
+    techStack: string[];
+}
