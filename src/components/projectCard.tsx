@@ -10,6 +10,7 @@ export default function ProjectCard({ project, isReverse }: { project: TProject,
 
             <div className='flex flex-col gap-4'>
                 <h1 className='lg:text-5xl text-2xl font-bold capitalize'>{project.title}</h1>
+                {project.client && <h3 className='font-semibold text-xl'>For {project.client}</h3>}
                 <p className='text-base font-light'>{project.description}</p>
                 {
                     project.link &&
