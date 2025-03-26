@@ -44,7 +44,7 @@ function page() {
     ];
 
     return (
-        <section className='px-4 max-w-[var(--max-width)] flex flex-col gap-24 items-start lg:py-24 py-16 lg:px-0 mx-auto'>
+        <section className='px-4 lg:max-w-[var(--max-width)] flex flex-col gap-24 items-start lg:py-24 py-16 lg:px-0 mx-auto'>
             <SectionTitle title='Projects Developed.' />
 
             <section className='flex flex-col gap-8 w-full'>
