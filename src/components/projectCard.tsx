@@ -11,7 +11,10 @@ export default function ProjectCard({ project, isReverse }: { project: TProject,
             <div className='flex flex-col gap-4'>
                 <h1 className='lg:text-5xl text-2xl font-bold capitalize'>{project.title}</h1>
                 <p className='text-base font-light'>{project.description}</p>
-                <Link href={'work/' + project.id} className='bg-white text-black px-4 py-2 rounded-lg lg:w-fit w-full text-center hover:bg-stone-200'>Read more</Link>
+                {
+                    project.link &&
+                    <Link href={'work/' + project.id} className='bg-white text-black px-4 py-2 rounded-lg lg:w-fit w-full text-center hover:bg-stone-200'>Read more</Link>
+                }
             </div>
         </div>
     )
