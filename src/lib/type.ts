@@ -24,6 +24,7 @@ export type TSocialsLinks = {
 }
 
 export type TProject = {
+    id: string;
     title: string;
     description: string;
     client?: string;
@@ -31,6 +32,7 @@ export type TProject = {
     image: string;
     tags: string[];
     techStack: string[];
+    longDescription?: string;
 }
 
 export type TService = {
