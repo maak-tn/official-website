@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function ProjectCard({project, isReverse}: {project: TProject, isReverse: boolean}) {
     return (
-        <div className={`flex flex-col items-center justify-center lg:gap-32 gap-12 bg-[#1E1E1E] text-white rounded-xl w-full p-12 ${isReverse ? 'lg:flex-row-reverse flex-col-reverse' : ''}`}>
+        <div className={`flex lg:flex-row flex-col items-center justify-center lg:gap-32 gap-12 bg-[#1E1E1E] text-white rounded-xl w-full p-12 ${isReverse ? 'lg:flex-row-reverse flex-col-reverse' : ''}`}>
             <Image src={project.image} alt="placeholder" width={300} height={300} className='block w-44 lg:w-[300px] mx-auto'/>
 
             <div className='flex flex-col gap-4'>
