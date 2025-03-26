@@ -26,7 +26,8 @@ export type TSocialsLinks = {
 export type TProject = {
     title: string;
     description: string;
-    link: string;
+    client?: string;
+    link?: string;
     image: string;
     tags: string[];
     techStack: string[];
