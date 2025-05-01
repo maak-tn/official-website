@@ -21,6 +21,16 @@ export const projects: TProject[] = [
         tags: ["Feature", "GitHub", "Chrome Extension"],
         techStack: ['HTML', 'CSS', 'TypeScript'],
         longDescription: "Say goodbye to endless scrolling through your repositories. GitHub Groups is a powerful Chrome extension that transforms how developers organize and access their GitHub projects. With intuitive custom grouping capabilities, you can finally categorize repositories your way—by client, technology stack, project phase, or any system that makes sense to you. The extension seamlessly integrates with GitHub's native interface, providing quick access to your most important repos with minimal clicks. Whether you're managing dozens or hundreds of repositories, GitHub Groups helps you reclaim valuable time with its lightning-fast search functionality and intelligent organization tools. Developed by MAAK CORP, this extension delivers the organization feature GitHub users have been requesting for years, enhancing your workflow without disrupting it. Install GitHub Groups today and experience a more productive GitHub experience."
+    },
+    {
+        id: '3',
+        title: 'VAGA CRM',
+        description: 'A CRM for Tunsiian businesses to manage their clients and sales',
+        link: 'https://vaga.tn',
+        image: '/projects/vaga.png',
+        tags: ["CRM", "SAAS"],
+        techStack: ['Angular', 'React', 'MySQL', 'AWS', 'Digital Ocean', 'Docker'],
+        longDescription: "VAGA CRM is a powerful customer relationship management solution designed specifically for Tunisian businesses. With a focus on enhancing client interactions and streamlining sales processes, VAGA CRM offers a comprehensive suite of tools to manage leads, track sales activities, and analyze customer data. The platform's user-friendly interface allows teams to easily navigate through client profiles, sales pipelines, and performance metrics. VAGA CRM also integrates seamlessly with popular communication channels, ensuring that your team stays connected with clients at all times. Whether you're a small startup or an established enterprise, VAGA CRM provides the flexibility and scalability needed to grow your business while maintaining strong customer relationships."
     }
 ];
 

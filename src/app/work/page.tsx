@@ -1,4 +1,5 @@
 import ProjectCard from '@/components/projectCard';
+import UseCaseCard from '@/components/useCasecard';
 import SectionTitle from '@/components/ui/sectionTitle';
 import { projects, services } from '@/lib/data';
 import { TProject } from '@/lib/type';
@@ -10,10 +11,10 @@ function page() {
         <section className='px-4 lg:max-w-[var(--max-width)] flex flex-col gap-24 items-start lg:py-24 py-16 lg:px-0 mx-auto'>
             <SectionTitle title='Projects Developed.' />
 
-            <section className='flex flex-col gap-8 w-full'>
+            <section className='grid grid-cols-1 lg:grid-cols-2 gap-4 w-full'>
                 {
                     projects.map((project: TProject, index: number) => (
-                        <ProjectCard key={index} project={project} isReverse={index % 2 === 0} />
+                        <ProjectCard key={index} project={project} />
                     ))
                 }
             </section>
@@ -23,7 +24,7 @@ function page() {
             <section className='flex flex-col gap-8 w-full'>
                 {
                     services.map((project: TProject, index: number) => (
-                        <ProjectCard key={index} project={project} isReverse={index % 2 === 0} />
+                        <UseCaseCard key={index} project={project} isReverse={index % 2 === 0} />
                     ))
                 }
             </section>

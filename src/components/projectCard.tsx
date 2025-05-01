@@ -3,13 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export default function ProjectCard({ project, isReverse }: { project: TProject, isReverse: boolean }) {
+export default function ProjectCard({ project }: { project: TProject }) {
     return (
-        <div className={`flex lg:flex-row flex-col items-center justify-center lg:gap-32 gap-12 bg-[#252527] text-white rounded-xl w-full p-12 ${isReverse ? 'lg:flex-row-reverse flex-col-reverse' : ''}`}>
-            <Image src={project.image} alt="placeholder" width={300} height={300} className='block w-44 lg:w-[300px] mx-auto' />
+        <div className="flex flex-col  gap-12 bg-[#252527] text-white rounded-xl w-full">
+            <Image src={project.image} alt="placeholder" width={300} height={300} className='block w-full mx-auto rounded-xl' />
 
-            <div className='flex flex-col gap-4'>
-                <h1 className='lg:text-5xl text-2xl font-bold capitalize'>{project.title}</h1>
+            <div className='flex flex-col gap-12 p-12'>
+                <h1 className='lg:text-5xl text-2xl font-thin uppercase'>{project.title}</h1>
                 {project.client && <h3 className='font-semibold text-xl'>For {project.client}</h3>}
                 <p className='text-base font-light'>{project.description}</p>
                 <div className='flex flex-col gap-1'>
