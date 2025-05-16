@@ -7,7 +7,7 @@ function About() {
 
     const stats: TStatsCard[] = [
         {
-            label: '21+',
+            label: '24+',
             description: 'Completed Projects'
         },
         {

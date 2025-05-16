@@ -14,7 +14,7 @@ export default {
         border: '#303436'
       },
       height: {
-        sahredSection: 'calc(100vh - var(--navbar-height))'
+        sahredSection: 'calc(95vh - var(--navbar-height))'
       }
     },
   },

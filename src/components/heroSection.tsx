@@ -13,14 +13,14 @@ function HeroSection() {
                 </p>
             </div>
 
-            <div className='hidden lg:flex flex-col items-start gap-4 lg:justify-between lg:gap-0 lg:flex-row text-xl font-thin lg:pb-12`'>
+            <div className='hidden lg:flex flex-col items-start gap-4 lg:justify-between lg:gap-0 lg:flex-row text-xl font-thin`'>
                 <p>
                     Based in <a href="https://en.wikipedia.org/wiki/Tunisia" target='_blank' className='text-white font-semibold'>TUNISIA</a>
                     <br />
                     and working worldwide
                 </p>
                 <p className='lg:text-right lg:max-w-[600px]'>
-                    SAAS products for small and medium businesses.
+                    SAAS products for small and medium sized businesses.
                     <br />
                     Project management and Consulting services.
                 </p>
