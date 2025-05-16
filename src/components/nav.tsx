@@ -10,6 +10,10 @@ function Nav() {
             link: '/'
         },
         {
+            name: 'Services',
+            link: '/services'
+        },
+        {
             name: 'About',
             link: '/about'
         },
@@ -17,10 +21,6 @@ function Nav() {
             name: 'Work',
             link: '/work'
         },
-        // {
-        //     name: 'Services',
-        //     link: '/services'
-        // }
     ];
 
     return (

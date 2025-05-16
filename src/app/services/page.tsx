@@ -1,72 +1,102 @@
 import SectionTitle from '@/components/ui/sectionTitle';
-import { TService } from '@/lib/type';
-import React from 'react'
+import React from 'react';
 
-function page() {
-
-    const services: TService[] = [
+function Page() {
+    const services = [
         {
-            title: 'Web Development',
-            client: 'WinIntelligence (Netherlands)',
-            description: "Ship small features and enhancements with minimal guidance and support from other team members.\n Develop features and improvements to the available products in a secure, well-tested, and performant way.\n Fix prioritized issues from the issue tracker.",
-            image: '/services/dev.svg',
-            tags: ['Frontend', 'Backend', 'Fullstack'],
-            techStack: ['Angular', 'Angular-JS', 'React', 'Next-JS', 'NodeJS']
+            category: "UI / UX DESIGN",
+            leftColumn: [
+                "App Design",
+                "Website Design",
+                "Landing Page Design"
+            ],
+            rightColumn: [
+                "Design Systems",
+                "Wireframing",
+                "Prototyping"
+            ]
         },
         {
-            title: 'Project Management & Consulting',
-            client: 'DivaSoftware (Tunisia)',
-            description: 'Leading and mentoring development teams in delivering complex, enterprise-scale solutions (ERP, Custom CRM, …).\n Develop and execute comprehensive project roadmaps and development plans.\n Manage and lead a team of 6 developers to achieve project objectives.',
-            image: '/services/management.svg',
-            tags: ['Project Management', 'Consulting', 'Mentoring'],
-            techStack: ['Agile', 'Scrum', 'Kanban', 'ClickUp', 'Slack']
+            category: "WEB DEVELOPMENT",
+            leftColumn: [
+                "React Development",
+                "Angular Development",
+                "Next.js Development"
+            ],
+            rightColumn: [
+                "Node.js Backend",
+                "API Integration",
+                "Database Design"
+            ]
+        },
+        {
+            category: "DEVOPS & CLOUD",
+            leftColumn: [
+                "AWS Infrastructure",
+                "Docker Containerization",
+                "CI/CD Pipelines"
+            ],
+            rightColumn: [
+                "Cloud Optimization",
+                "Deployment Automation",
+                "Monitoring & Scaling"
+            ]
+        },
+        {
+            category: "THIRD-PARTY INTEGRATIONS",
+            leftColumn: [
+                "Authentication (Auth0)",
+                "Email Services (SendGrid)",
+                "Payment Gateways"
+            ],
+            rightColumn: [
+                "Self-Hosted Alternatives",
+                "Media Management (ImageKit)",
+                "Cost Optimization"
+            ]
+        },
+        {
+            category: "TECHNICAL LEADERSHIP",
+            leftColumn: [
+                "Team Mentoring",
+                "Code Review Systems",
+                "Development Standards"
+            ],
+            rightColumn: [
+                "Project Management",
+                "Agile Implementation",
+                "Technical Documentation"
+            ]
         }
     ];
 
     return (
-        <section className='px-4 max-w-[var(--max-width)] flex flex-col gap-24 items-start lg:py-24 py-16 lg:px-0 mx-auto'>
-            <SectionTitle title='Services Provided.' />
+        <div className="px-4 max-w-[var(--max-width)] flex flex-col gap-24 items-start lg:py-24 py-16 lg:px-0 mx-auto">
+            <SectionTitle title='What I do?' subTitle="services" />
 
-            <section className='flex flex-col gap-8 w-full'>
-                {
-                    services.map((service: TService, index: number) => (
-                        <div key={index} className='flex flex-col lg:flex-row border border-gray-400 rounded-xl items-center lg:w-4/5 min-h-[300px] lg:pl-2 p-4'>
-                            <img src={service.image} alt={service.title} className='w-64' />
-                            <div className='flex flex-col gap-8 h-full w-full lg:p-8 lg:pt-0 pt-12'>
-                                <div>
-                                    <h3 className='font-semibold text-4xl uppercase'>{service.title}</h3>
-                                    <h4 className='font-light text-lg uppercase text-stone-400'>{service.client}</h4>
-                                </div>
-                                <ul className='list-disc lg:pl-12 pl-4'>
-                                    {
-                                        service.description.split('\n').map((line: string, index: number) => (
-                                            <li key={index}>{line}</li>
-                                        ))
-                                    }
-                                </ul>
-                                <div className='leading-tight'>
-                                    <div className='flex gap-1 flex-wrap'>
-                                        {
-                                            service.tags.map((tag: string, index: number) => (
-                                                <span key={index} className='bg-black text-stone-500 px-2 py-1 rounded-lg'>#{tag}</span>
-                                            ))
-                                        }
-                                    </div>
-                                    <div className='flex gap-1 flex-wrap'>
-                                        {
-                                            service.techStack.map((tech: string, index: number) => (
-                                                <span key={index} className='bg-black text-stone-500 px-2 py-1 rounded-lg'>#{tech}</span>
-                                            ))
-                                        }
-                                    </div>
-                                </div>
-                            </div>
+            {services.map((service, index) => (
+                <div key={index} className="border-t border-border py-12 w-full">
+                    <h2 className="text-4xl font-bold mb-10">{service.category}</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="space-y-4">
+                            {service.leftColumn.map((item, itemIndex) => (
+                                <p key={itemIndex} className="text-gray-300 hover:text-white transition-colors">
+                                    {item}
+                                </p>
+                            ))}
                         </div>
-                    ))
-                }
-            </section>
-        </section>
-    )
+                        <div className="space-y-4">
+                            {service.rightColumn.map((item, itemIndex) => (
+                                <p key={itemIndex} className="text-gray-300 hover:text-white transition-colors">
+                                    {item}
+                                </p>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
 }
 
-export default page
+export default Page;

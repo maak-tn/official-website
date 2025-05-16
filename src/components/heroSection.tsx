@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function HeroSection() {
@@ -22,7 +23,7 @@ function HeroSection() {
                 <p className='lg:text-right lg:max-w-[600px]'>
                     SAAS products for small and medium sized businesses.
                     <br />
-                    Project management and Consulting services.
+                    Project management and Consulting <Link href={'/services'} className='font-bold underline'>services</Link>.
                 </p>
             </div>
         </section>
