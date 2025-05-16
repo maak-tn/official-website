@@ -24,7 +24,7 @@ function page() {
             <section className='flex flex-col gap-8 w-full'>
                 {
                     services.map((project: TProject, index: number) => (
-                        <UseCaseCard key={index} project={project} isReverse={index % 2 === 0} />
+                        <UseCaseCard key={index} project={project} />
                     ))
                 }
             </section>
