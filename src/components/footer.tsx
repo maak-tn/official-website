@@ -44,10 +44,10 @@ function Footer() {
 
     return (
         <footer className='mt-24'>
-            <div className='border border-t border-b border-l-0 border-r-0  border-border py-12 lg:px-0 px-4 flex flex-col gap-6 items-center'>
-                <h3 className='font-thin uppercase text-lg'>have a project in mind?</h3>
-                <h1 className='font-bold uppercase lg:text-7xl text-5xl text-center'>Let's work together</h1>
-                <a href="https://forms.gle/iKKj3LsQbgySDCdK6" target='_blank' className='border border-border p-4 rounded-full capitalize'>get in touch ↗️</a>
+            <div className='flex flex-col items-center gap-6 px-4 py-12 border border-t border-b border-l-0 border-r-0 border-border lg:px-0'>
+                <h3 className='text-lg font-normal uppercase'>have a project in mind?</h3>
+                <h1 className='text-5xl font-bold text-center uppercase lg:text-7xl'>Let's work together</h1>
+                <a href="https://forms.gle/iKKj3LsQbgySDCdK6" target='_blank' className='p-4 capitalize border rounded-full border-border'>get in touch ↗️</a>
                 <div className="flex justify-center mt-8 space-x-6">
                     {
                         SOCIALS.map((item: TSocialsLinks, index: number) => (

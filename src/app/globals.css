@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #ECEDEC;
-  --foreground: #1C1D1E;
+  --background: #E8E6E3;
+  --foreground: #000000;
   --navbar-height: 60px;
   --max-width: 1200px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1C1D1E;
-    --foreground: #ECEDEC;
+    --background: #000000;
+    --foreground: #E8E6E3;
   }
 }
 
