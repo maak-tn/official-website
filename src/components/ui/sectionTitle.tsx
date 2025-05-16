@@ -1,10 +1,11 @@
 import React from 'react'
 
-function SectionTitle({ title }: { title: string }) {
+function SectionTitle({ title, subTitle }: { title: string, subTitle?: string }) {
     return (
-        <h1 className='uppercase text-5xl font-bold lg:min-w-[800px] underline'>
-            {title}
-        </h1>
+        <div>
+            <p className="text-sm uppercase tracking-wide mb-2">{subTitle}</p>
+            <h1 className="text-6xl font-bold  uppercase">{title}</h1>
+        </div>
     )
 }
 

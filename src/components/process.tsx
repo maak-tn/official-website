@@ -55,7 +55,7 @@ function Process() {
 
     return (
         <section className='px-4 max-w-[var(--max-width)] flex flex-col gap-24 items-start lg:py-24 py-16 lg:px-0 mx-auto'>
-            <SectionTitle title='how i do it ?' />
+            <SectionTitle title='how i do it ?' subTitle='process' />
             <div className='w-full flex flex-row gap-8 overflow-x-scroll hiddenScroll '>
                 {
                     process.map((item: TProcessItem, index: number) => (<ProcessCard key={index} {...item} />))
