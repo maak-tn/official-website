@@ -1,5 +1,7 @@
+'use client';
 import { TSocialsLinks } from '@/lib/type';
 import React from 'react'
+import { PopupButton } from '@typeform/embed-react'
 
 function Footer() {
 
@@ -47,7 +49,9 @@ function Footer() {
             <div className='flex flex-col items-center gap-6 px-4 py-12 border border-t border-b border-l-0 border-r-0 border-border lg:px-0'>
                 <h3 className='text-lg font-normal uppercase'>have a project in mind?</h3>
                 <h1 className='text-5xl font-bold text-center uppercase lg:text-7xl'>Let's work together</h1>
-                <a href="https://forms.gle/iKKj3LsQbgySDCdK6" target='_blank' className='p-4 capitalize border rounded-full border-border'>get in touch ↗️</a>
+                <PopupButton id="NEhuc2i9" className='px-8 py-3 text-base font-semibold text-white bg-primary rounded-lg hover:bg-white hover:text-black transition-colors duration-300 border border-whitte capitalize'>
+                    get in touch ↗️
+                </PopupButton>
                 <div className="flex justify-center mt-8 space-x-6">
                     {
                         SOCIALS.map((item: TSocialsLinks, index: number) => (
