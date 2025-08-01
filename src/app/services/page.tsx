@@ -72,7 +72,7 @@ function Page() {
 
     return (
         <div className="px-4 max-w-[var(--max-width)] flex flex-col gap-24 items-start lg:py-24 py-16 lg:px-0 mx-auto">
-            <SectionTitle title='What I do?' subTitle="services" />
+            <SectionTitle title='What We do?' subTitle="services" />
 
             {services.map((service, index) => (
                 <div key={index} className="border-t border-border py-12 w-full">
