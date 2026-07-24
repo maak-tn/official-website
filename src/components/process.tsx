@@ -2,6 +2,7 @@ import React from 'react'
 import ProcessCard from './ui/processCard'
 import { TProcessItem } from '@/lib/type'
 import SectionTitle from './ui/sectionTitle'
+import ProcessFlow from './ui/processFlow'
 
 function Process() {
 
@@ -54,9 +55,22 @@ function Process() {
     ]
 
     return (
-        <section className='px-4 max-w-[var(--max-width)] flex flex-col gap-24 items-start lg:py-24 py-16 lg:px-0 mx-auto'>
+        <section className='px-4 max-w-[var(--max-width)] flex flex-col gap-16 items-start lg:py-24 py-16 lg:px-0 mx-auto'>
             <SectionTitle title='how we do it?' subTitle='process' />
-            <div className='w-full flex flex-row gap-8 overflow-x-scroll hiddenScroll '>
+
+            <div className='flex flex-col gap-8 w-full'>
+                <p className='lg:text-2xl lg:leading-loose lg:text-left text-justify lg:tracking-wide lg:max-w-[900px]'>
+                    Most agencies jump straight into code, leaving strategy and testing as an afterthought. We don&apos;t. Every project moves through the same four phases — from first conversation to final sign-off — so nothing gets rushed and nothing gets missed.
+                </p>
+
+                <ProcessFlow steps={process.map((item) => item.title)} />
+
+                <p className='text-sm text-white/50'>
+                    Each phase has a clear deliverable and timeline — no scope creep, no guesswork.
+                </p>
+            </div>
+
+            <div className='w-full flex flex-col gap-6'>
                 {
                     process.map((item: TProcessItem, index: number) => (<ProcessCard key={index} {...item} />))
                 }
