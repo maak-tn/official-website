@@ -1,9 +1,21 @@
 'use client';
 import { TSocialsLinks } from '@/lib/type';
-import React from 'react'
-import { PopupButton } from '@typeform/embed-react'
+import React, { useEffect } from 'react'
+import { getCalApi } from '@calcom/embed-react'
 
 function Footer() {
+
+    useEffect(() => {
+        (async function () {
+            const cal = await getCalApi({ namespace: 'intro' });
+            cal('ui', {
+                theme: 'dark',
+                styles: { branding: { brandColor: '#000000' } },
+                hideEventTypeDetails: false,
+                layout: 'month_view',
+            });
+        })();
+    }, []);
 
     const SOCIALS: TSocialsLinks[] = [
         {
@@ -31,9 +43,14 @@ function Footer() {
             <div className='flex flex-col items-center gap-6 px-4 py-12 border border-t border-b border-l-0 border-r-0 border-border lg:px-0'>
                 <h3 className='text-lg font-normal uppercase'>have a project in mind?</h3>
                 <h1 className='text-5xl font-bold text-center uppercase lg:text-7xl'>Let's work together</h1>
-                <PopupButton id="NEhuc2i9" className='px-8 py-3 text-base font-semibold text-white bg-primary rounded-lg hover:bg-white hover:text-black transition-colors duration-300 border border-whitte capitalize'>
+                <button
+                    data-cal-namespace="intro"
+                    data-cal-link="aymkh/intro"
+                    data-cal-config='{"layout":"month_view"}'
+                    className='px-8 py-3 text-base font-semibold text-white bg-primary rounded-lg hover:bg-white hover:text-black transition-colors duration-300 border border-whitte capitalize'
+                >
                     get in touch ↗️
-                </PopupButton>
+                </button>
                 <div className="flex justify-center mt-8 space-x-6">
                     {
                         SOCIALS.map((item: TSocialsLinks, index: number) => (
