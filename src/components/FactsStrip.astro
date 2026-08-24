@@ -1,0 +1,27 @@
+---
+const facts = [
+  { value: "€30–45", label: "Per hour, published — not quoted case by case" },
+  { value: "UTC+1", label: "Year-round - level with London March to October" },
+  { value: "SUARL", label: "A registered company invoicing in euro/usd" },
+  { value: "EN · FR", label: "Working languages, written and spoken" },
+];
+---
+
+<section aria-label="The engagement, in facts" class="py-14">
+  <div
+    class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-x-8 gap-y-10"
+  >
+    {
+      facts.map((fact) => (
+        <div>
+          <p class="ml-[-0.03em] font-extrabold text-[clamp(30px,3.2vw,44px)] leading-[1.1] text-accent">
+            {fact.value}
+          </p>
+          <p class="mt-3.5 text-[13px] leading-5 tracking-label text-text/70 uppercase">
+            {fact.label}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+import CalButton from "./CalButton.astro";
+
+const links = [
+  { href: "#capabilities", label: "Capabilities" },
+  { href: "#rates", label: "Rates", current: true },
+  { href: "#about", label: "About" },
+];
+---
+
+<nav class="border-b-2 border-divider">
+  <div
+    class="mx-auto flex max-w-300 flex-wrap items-center gap-x-6 gap-y-2 px-6 py-3"
+  >
+    <span class="mr-auto font-extrabold text-lg">MAAK CORP</span>
+    {
+      links.map((link) => (
+        <a
+          href={link.href}
+          class="nav-link"
+          aria-current={link.current ? "location" : undefined}
+        >
+          {link.label}
+        </a>
+      ))
+    }
+    <CalButton>Check availability</CalButton>
+  </div>
+</nav>

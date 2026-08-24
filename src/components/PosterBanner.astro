@@ -1,0 +1,40 @@
+---
+interface Props {
+  id?: string;
+  kicker?: string;
+  headingClass?: string;
+}
+const {
+  id,
+  kicker,
+  headingClass = "max-w-[24ch] text-[clamp(32px,4.2vw,56px)]",
+} = Astro.props;
+const hasAction = Astro.slots.has("action");
+---
+
+<section id={id} class="bg-accent text-bg">
+  <div class="mx-auto max-w-300 px-[clamp(20px,5vw,72px)] py-21">
+    {
+      kicker && (
+        <span class="mb-8 block text-[13px] leading-5 tracking-label uppercase">
+          {kicker}
+        </span>
+      )
+    }
+    <h2
+      class:list={[
+        "ml-[-0.058em] leading-[1.06] tracking-heading font-extrabold",
+        headingClass,
+      ]}
+    >
+      <slot />
+    </h2>
+    {
+      hasAction && (
+        <div class="mt-10">
+          <slot name="action" />
+        </div>
+      )
+    }
+  </div>
+</section>

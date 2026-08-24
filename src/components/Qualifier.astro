@@ -1,0 +1,38 @@
+---
+const fit = [
+  "Sprint or monthly capacity inside an agency team that already has a delivery lead.",
+  "TypeScript, Node, React and Next builds — features, integrations, migrations, maintenance.",
+  "DevOps: CI pipelines, containers, cloud infrastructure, release and monitoring work.",
+  "White-label delivery: we speak to you, you speak to your client.",
+];
+const noFit = [
+  "Briefs priced below the published band. We do not bid under it.",
+  "Template or page-builder sites, and one-off visual fixes with no scoping.",
+  "Engagements needing someone on site, or on North American hours end to end.",
+  "Anything where the buyer wants a partner brand in front of their client.",
+];
+---
+
+<section aria-label="Qualifier" class="py-18">
+  <span class="kicker">Before you write</span>
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-12">
+    <div class="border-t-2 border-divider pt-7">
+      <h2 class="mb-6 text-[26px] leading-8 tracking-[-0.01em] font-extrabold">
+        Work we take on
+      </h2>
+      <ul class="flex max-w-[46ch] flex-col gap-5 text-base leading-7">
+        {fit.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+    <div class="border-t-2 border-divider pt-7">
+      <h2 class="mb-6 text-[26px] leading-8 tracking-[-0.01em] font-extrabold">
+        Work that belongs elsewhere
+      </h2>
+      <ul
+        class="flex max-w-[46ch] flex-col gap-5 text-base leading-7 text-text/78"
+      >
+        {noFit.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,73 @@
+---
+const rows = [
+  {
+    engagement: "Short overflow",
+    commitment: "Hourly, 8h minimum",
+    price: "€45",
+    perHour: "45.00",
+    perDay: "360",
+  },
+  {
+    engagement: "Sprint block",
+    commitment: "2 weeks, ~80h",
+    price: "€3,000",
+    perHour: "37.50",
+    perDay: "300",
+  },
+  {
+    engagement: "Dedicated month",
+    commitment: "4 weeks, ~160h",
+    price: "€5,400",
+    perHour: "33.75",
+    perDay: "270",
+  },
+  {
+    engagement: "Fixed scope",
+    commitment: "Per project",
+    price: "from €4,500",
+    perHour: "—",
+    perDay: "—",
+  },
+  {
+    engagement: "Architecture / DevOps review",
+    commitment: "3 days, fixed",
+    price: "€1,200",
+    perHour: "—",
+    perDay: "400",
+  },
+];
+---
+
+<section aria-label="Rate card" class="pb-14">
+  <div class="overflow-x-auto">
+    <table class="table-base tabular-nums min-w-140">
+      <thead>
+        <tr>
+          <th>Engagement</th>
+          <th>Commitment</th>
+          <th>Price</th>
+          <th>Per hour</th>
+          <th>Per day</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map((row) => (
+            <tr>
+              <td>{row.engagement}</td>
+              <td>{row.commitment}</td>
+              <td>{row.price}</td>
+              <td>{row.perHour}</td>
+              <td>{row.perDay}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+  <p class="mt-6 max-w-[70ch] text-sm leading-6 text-text/70">
+    Prices exclude any tax due in your jurisdiction. Hours beyond a booked block
+    are billed at that block's hourly figure. Fixed-scope work is quoted from a
+    written brief and invoiced in two parts.
+  </p>
+</section>

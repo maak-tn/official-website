@@ -1,0 +1,41 @@
+---
+const items = [
+  {
+    n: "01",
+    title: "Full-stack JavaScript",
+    body: "TypeScript across the stack: React and Next on the front, Node and Nest services behind, Postgres and MongoDB underneath. Brought in on running codebases as often as new ones.",
+  },
+  {
+    n: "02",
+    title: "DevOps and delivery",
+    body: "Docker, CI pipelines, infrastructure as code, staged environments and monitoring. Usually the reason an agency's build stops being a deployment problem and starts being a release schedule.",
+  },
+  {
+    n: "03",
+    title: "Overflow, white-labelled",
+    body: "Standing capacity for the weeks your own team is full. We work in your repository, your tracker and your standup, under your brand, and we do not contact your client.",
+  },
+];
+---
+
+<section id="capabilities" class="py-18">
+  <span class="kicker">Capabilities</span>
+  {
+    items.map((item, i) => (
+      <div
+        class:list={[
+          "grid grid-cols-[minmax(64px,120px)_minmax(0,380px)_minmax(0,1fr)] items-baseline gap-x-[clamp(24px,4vw,72px)] gap-y-7 py-10",
+          i === 0 ? "pt-0" : "border-t-2 border-divider",
+        ]}
+      >
+        <p class="text-[15px] leading-7 tabular-nums font-extrabold">
+          {item.n}
+        </p>
+        <h3 class="text-2xl leading-7 tracking-[-0.01em] font-extrabold">
+          {item.title}
+        </h3>
+        <p class="max-w-[52ch] text-base leading-7 text-text/78">{item.body}</p>
+      </div>
+    ))
+  }
+</section>
