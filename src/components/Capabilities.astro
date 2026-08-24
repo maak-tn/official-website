@@ -24,16 +24,18 @@ const items = [
     items.map((item, i) => (
       <div
         class:list={[
-          "grid grid-cols-[minmax(64px,120px)_minmax(0,380px)_minmax(0,1fr)] items-baseline gap-x-[clamp(24px,4vw,72px)] gap-y-7 py-10",
+          "grid grid-cols-1 gap-y-2 py-10 md:grid-cols-[minmax(64px,120px)_minmax(0,380px)_minmax(0,1fr)] md:items-baseline md:gap-x-[clamp(24px,4vw,72px)] md:gap-y-7",
           i === 0 ? "pt-0" : "border-t-2 border-divider",
         ]}
       >
-        <p class="text-[15px] leading-7 tabular-nums font-extrabold">
-          {item.n}
-        </p>
-        <h3 class="text-2xl leading-7 tracking-[-0.01em] font-extrabold">
-          {item.title}
-        </h3>
+        <div class="flex items-baseline gap-3 md:contents">
+          <p class="text-[15px] leading-7 tabular-nums font-extrabold">
+            {item.n}
+          </p>
+          <h3 class="text-2xl leading-7 tracking-[-0.01em] font-extrabold">
+            {item.title}
+          </h3>
+        </div>
         <p class="max-w-[52ch] text-base leading-7 text-text/78">{item.body}</p>
       </div>
     ))

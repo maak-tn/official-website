@@ -14,22 +14,103 @@ const links = [
 ];
 ---
 
-<nav class="border-b-2 border-divider">
+<nav class="border-b border-divider sticky top-0 z-50 bg-white/60 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-300 items-center gap-x-6 px-6 py-3">
+    <a class="mr-auto font-extrabold text-lg hover:text-accent" href="/"
+      >MAAK CORP</a
+    >
+
+    <div class="hidden md:flex md:items-center md:gap-x-6">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class="nav-link"
+            aria-current={link.id === current ? "location" : undefined}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+    <div class="hidden md:block">
+      <CalButton>Check availability</CalButton>
+    </div>
+
+    <button
+      type="button"
+      id="nav-toggle"
+      class="-mr-2 inline-flex h-10 w-10 items-center justify-center md:hidden"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+      aria-controls="nav-panel"
+    >
+      <svg
+        id="nav-icon-open"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      >
+        <path d="M2 5h16M2 10h16M2 15h16" />
+      </svg>
+      <svg
+        id="nav-icon-close"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        class="hidden"
+      >
+        <path d="M4 4l12 12M16 4L4 16" />
+      </svg>
+    </button>
+  </div>
+
   <div
-    class="mx-auto flex max-w-300 flex-wrap items-center gap-x-6 gap-y-2 px-6 py-3"
+    id="nav-panel"
+    class="hidden flex-col gap-1 border-t border-divider px-6 py-4 md:hidden"
   >
-    <span class="mr-auto font-extrabold text-lg">MAAK CORP</span>
     {
       links.map((link) => (
         <a
           href={link.href}
-          class="nav-link"
+          class="nav-link py-2 text-base"
           aria-current={link.id === current ? "location" : undefined}
         >
           {link.label}
         </a>
       ))
     }
-    <CalButton>Check availability</CalButton>
+    <CalButton class="btn btn-primary mt-3 w-full">Check availability</CalButton>
   </div>
 </nav>
+
+<script>
+  const toggle = document.getElementById("nav-toggle");
+  const panel = document.getElementById("nav-panel");
+  const iconOpen = document.getElementById("nav-icon-open");
+  const iconClose = document.getElementById("nav-icon-close");
+
+  const setOpen = (open) => {
+    panel?.classList.toggle("hidden", !open);
+    panel?.classList.toggle("flex", open);
+    toggle?.setAttribute("aria-expanded", String(open));
+    iconOpen?.classList.toggle("hidden", open);
+    iconClose?.classList.toggle("hidden", !open);
+  };
+
+  toggle?.addEventListener("click", () => {
+    setOpen(panel?.classList.contains("hidden") ?? false);
+  });
+
+  panel?.querySelectorAll("a, button").forEach((el) => {
+    el.addEventListener("click", () => setOpen(false));
+  });
+</script>
