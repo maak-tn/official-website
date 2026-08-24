@@ -1,0 +1,42 @@
+---
+const steps = [
+  {
+    n: "01",
+    title: "Scope",
+    body: "A written brief: the core flow, the screens that matter, and what's explicitly out of scope. Turned around in days, not weeks.",
+  },
+  {
+    n: "02",
+    title: "Build",
+    body: "The product gets built against that brief and deployed to a staging environment from the first week — no single \"big reveal\" at the end.",
+  },
+  {
+    n: "03",
+    title: "Test and harden",
+    body: "Manual and automated testing against the agreed scope, plus the CI, monitoring and backups most MVPs skip and regret later.",
+  },
+  {
+    n: "04",
+    title: "Launch and handover",
+    body: "Production deployment, a short handover call, and the repository — yours, not held hostage.",
+  },
+];
+---
+
+<section class="py-18">
+  <span class="kicker">How it works</span>
+  {
+    steps.map((step, i) => (
+      <div
+        class:list={[
+          "grid grid-cols-[minmax(64px,120px)_minmax(0,240px)_minmax(0,1fr)] items-baseline gap-x-[clamp(24px,4vw,72px)] gap-y-3 py-8",
+          i === 0 ? "pt-0" : "border-t-2 border-divider",
+        ]}
+      >
+        <p class="text-[15px] leading-7 tabular-nums font-extrabold">{step.n}</p>
+        <h3 class="text-2xl leading-7 tracking-heading font-extrabold">{step.title}</h3>
+        <p class="max-w-[52ch] text-base leading-7 text-text/78">{step.body}</p>
+      </div>
+    ))
+  }
+</section>

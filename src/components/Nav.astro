@@ -4,7 +4,7 @@ import CalButton from "./CalButton.astro";
 interface Props {
   current?: "capabilities" | "work" | "rates" | "about";
 }
-const { current = "rates" } = Astro.props;
+const { current } = Astro.props;
 
 const links = [
   { href: "/#capabilities", id: "capabilities", label: "Capabilities" },

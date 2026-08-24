@@ -1,0 +1,30 @@
+---
+const items = [
+  {
+    title: "One senior engineer, start to finish",
+    body: "No handoff between a project manager, a designer and three different developers. The person who scopes it is the person who ships it.",
+  },
+  {
+    title: "Fixed price, fixed scope",
+    body: "From €4,500, agreed in writing against a brief before a line of code is written — the same published figure as the rest of the rate card, not a number invented for this page.",
+  },
+  {
+    title: "Shipped, not prototyped",
+    body: "TypeScript across the stack, deployed with a working CI pipeline from week one — the same stack this company runs its own products on, not a throwaway demo build.",
+  },
+];
+---
+
+<section class="py-18">
+  <span class="kicker">What you get</span>
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-12">
+    {
+      items.map((item) => (
+        <div class="border-t-2 border-divider pt-7">
+          <h3 class="mb-4 text-[22px] leading-7 font-extrabold">{item.title}</h3>
+          <p class="text-[15.5px] leading-7 text-text/78">{item.body}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
