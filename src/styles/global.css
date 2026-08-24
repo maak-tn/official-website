@@ -102,7 +102,7 @@ body {
 	}
 
 	.kicker {
-		@apply block text-[13px] uppercase tracking-label text-accent-700;
+		@apply block text-xl uppercase tracking-label text-accent font-thin mb-10;
 	}
 
 	.nav-link {
