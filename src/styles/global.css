@@ -101,6 +101,18 @@ body {
 		@apply bg-accent-100 text-accent-800;
 	}
 
+	.card {
+		@apply flex flex-col gap-2 rounded-none bg-surface p-6;
+	}
+
+	.card-title {
+		@apply text-base leading-6 font-extrabold;
+	}
+
+	.card-body {
+		@apply text-[14px] leading-6 text-text/70;
+	}
+
 	.kicker {
 		@apply block text-xl uppercase tracking-label text-accent font-thin mb-10;
 	}
