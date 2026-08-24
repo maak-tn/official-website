@@ -1,10 +1,16 @@
 ---
 import CalButton from "./CalButton.astro";
 
+interface Props {
+  current?: "capabilities" | "work" | "rates" | "about";
+}
+const { current = "rates" } = Astro.props;
+
 const links = [
-  { href: "#capabilities", label: "Capabilities" },
-  { href: "#rates", label: "Rates", current: true },
-  { href: "#about", label: "About" },
+  { href: "/#capabilities", id: "capabilities", label: "Capabilities" },
+  { href: "/work", id: "work", label: "Work" },
+  { href: "/#rates", id: "rates", label: "Rates" },
+  { href: "/#about", id: "about", label: "About" },
 ];
 ---
 
@@ -18,7 +24,7 @@ const links = [
         <a
           href={link.href}
           class="nav-link"
-          aria-current={link.current ? "location" : undefined}
+          aria-current={link.id === current ? "location" : undefined}
         >
           {link.label}
         </a>

@@ -1,0 +1,75 @@
+---
+interface WorkItem {
+  title: string;
+  href: string;
+  description: string;
+  tags: string[];
+  techStack: string[];
+}
+
+const items: WorkItem[] = [
+  {
+    title: "VAGA Suite",
+    href: "https://vaga.tn",
+    description:
+      "An all-in-one ERP for Tunisian SMEs: quotes, orders, delivery notes, invoicing, stock and treasury in one place. A quote becomes an order, then a delivery note, then an invoice, without re-entering anything — stock and treasury update themselves as it moves. Built-in TEIF compliance handles electronic invoicing without the last-minute scramble around the regulation.",
+    tags: ["ERP", "SaaS", "Invoicing"],
+    techStack: ["Angular", "NestJS", "Supabase"],
+  },
+  {
+    title: "Planifi",
+    href: "https://planifi.tn",
+    description:
+      "Tender-management software for procurement teams, shipped as SaaS or self-hosted. Projects, documents and tender acquisition live in one system — Gantt, Kanban and calendar views, version-controlled document sharing, and a Chrome extension that pulls in new tenders as they're published.",
+    tags: ["SaaS", "Tender management", "Bidding"],
+    techStack: ["Angular", "NestJS", "MySQL", "Docker"],
+  },
+  {
+    title: "GitHub Groups",
+    href: "https://ghg.tn",
+    description:
+      "A Chrome extension that adds custom repository grouping to GitHub — by client, stack or project phase — with fast search across every group. Built because GitHub still doesn't ship the organising feature its own users keep asking for.",
+    tags: ["Chrome extension", "Developer tools"],
+    techStack: ["TypeScript", "HTML", "CSS"],
+  },
+];
+---
+
+<section aria-label="Selected work">
+  {
+    items.map((item, i) => (
+      <div
+        class:list={["py-10", i === 0 ? "pt-0" : "border-t-2 border-divider"]}
+      >
+        <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+          <h3 class="text-2xl leading-7 tracking-heading font-extrabold">
+            {item.title}
+          </h3>
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-ghost"
+          >
+            Visit ↗
+          </a>
+        </div>
+        <p class="mt-4 max-w-[68ch] text-base leading-7 text-text/78">
+          {item.description}
+        </p>
+        <div class="mt-5 flex flex-col gap-1.5">
+          <div class="flex flex-wrap gap-1.5">
+            {item.tags.map((tag) => (
+              <span class="tag tag-outline">{tag}</span>
+            ))}
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            {item.techStack.map((tech) => (
+              <span class="tag">{tech}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</section>
