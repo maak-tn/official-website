@@ -1,0 +1,32 @@
+---
+const items = [
+  {
+    title: "European hours",
+    body: "We work UTC+1 year-round and keep no daylight saving, so we are level with London from March to October and an hour behind Berlin over the same months. Standups, reviews and incidents happen inside your day.",
+  },
+  {
+    title: "One company invoice",
+    body: "Work is contracted with and invoiced by MAAK CORP SUARL, in euro, monthly or per block. You receive a company invoice with our registration details — not a freelancer’s receipt.",
+  },
+  {
+    title: "Your brand in front",
+    body: "Everything is delivered white-label under an NDA if you want one. We do not appear in your client's inbox, your credentials list, or a public case study without your written approval.",
+  },
+];
+---
+
+<section class="py-18">
+  <span class="kicker mb-10">What the figure includes</span>
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-12">
+    {
+      items.map((item) => (
+        <div class="border-t-2 border-divider pt-7">
+          <h3 class="mb-4 text-[22px] leading-7 font-extrabold">
+            {item.title}
+          </h3>
+          <p class="text-[15.5px] leading-7 text-text/78">{item.body}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

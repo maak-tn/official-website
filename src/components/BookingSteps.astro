@@ -1,0 +1,43 @@
+---
+const steps = [
+  {
+    n: "01",
+    body: "Send the stack, the scope and the weeks you need covered. A paragraph is enough.",
+  },
+  {
+    n: "02",
+    body: "We reply within one working day with the engagement that fits, the start date, and anything that would make us decline.",
+  },
+  {
+    n: "03",
+    body: "Contract and first invoice go out; repository access comes back. Work starts on the agreed Monday.",
+  },
+];
+---
+
+<section class="py-18">
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12">
+    <div>
+      <span class="kicker mb-6">How a booking starts</span>
+      <h2
+        class="ml-[-0.02em] text-[clamp(28px,3vw,38px)] leading-[1.2] tracking-heading font-extrabold"
+      >
+        Three messages, then work.
+      </h2>
+    </div>
+    <div>
+      <ol class="flex flex-col gap-6">
+        {
+          steps.map((step) => (
+            <li class="grid max-w-[54ch] grid-cols-[44px_1fr] text-base leading-7">
+              <span class="tabular-nums font-extrabold text-accent">
+                {step.n}
+              </span>
+              <span>{step.body}</span>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+</section>

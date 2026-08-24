@@ -1,11 +1,69 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
+import FactsStrip from "../components/FactsStrip.astro";
+import Qualifier from "../components/Qualifier.astro";
+import Capabilities from "../components/Capabilities.astro";
+import About from "../components/About.astro";
+import PosterBanner from "../components/PosterBanner.astro";
+import RateTable from "../components/RateTable.astro";
+import IncludesGrid from "../components/IncludesGrid.astro";
+import BookingSteps from "../components/BookingSteps.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <Nav />
+
+  <Container>
+    <Hero />
+    <hr class="hr" />
+    <FactsStrip />
+    <hr class="hr" />
+    <Qualifier />
+    <hr class="hr" />
+    <Capabilities />
+    <hr class="hr" />
+    <About />
+  </Container>
+
+  <PosterBanner
+    id="rates"
+    kicker="/rates"
+    headingClass="max-w-[26ch] text-[clamp(34px,4.4vw,60px)]"
+  >
+    Our rates are on the site, not behind a call.
+  </PosterBanner>
+
+  <Container>
+    <section class="pt-18 pb-14">
+      <p class="max-w-[60ch] text-[19px] leading-8">
+        Every engagement below sits inside a published band of €30–45 per hour.
+        Commitment is what moves the number: an hour bought on Friday afternoon
+        costs more than an hour inside a booked month, and neither is discounted
+        for being cheap.
+      </p>
+    </section>
+
+    <RateTable />
+    <hr class="hr" />
+    <IncludesGrid />
+    <hr class="hr" />
+    <BookingSteps />
+  </Container>
+
+  <PosterBanner>
+    Tell us the weeks you need covered.
+    <Fragment slot="action">
+      <a href="mailto:hello@maak-corp.tn" class="btn btn-ghost-inverse"
+        >hello@maak-corp.tn</a
+      >
+    </Fragment>
+  </PosterBanner>
+
+  <Container>
+    <Footer />
+  </Container>
 </Layout>
