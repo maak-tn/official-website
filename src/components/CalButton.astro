@@ -1,0 +1,16 @@
+---
+interface Props {
+	class?: string;
+}
+const { class: className = 'btn btn-primary' } = Astro.props;
+---
+
+<button
+	type="button"
+	data-cal-namespace="intro"
+	data-cal-link="aymkh/intro"
+	data-cal-config={`{"layout":"month_view"}`}
+	class={className}
+>
+	<slot />
+</button>

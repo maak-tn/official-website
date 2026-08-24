@@ -12,6 +12,7 @@ import RateTable from "../components/RateTable.astro";
 import IncludesGrid from "../components/IncludesGrid.astro";
 import BookingSteps from "../components/BookingSteps.astro";
 import Footer from "../components/Footer.astro";
+import CalButton from "../components/CalButton.astro";
 ---
 
 <Layout>
@@ -57,9 +58,7 @@ import Footer from "../components/Footer.astro";
   <PosterBanner>
     Tell us the weeks you need covered.
     <Fragment slot="action">
-      <a href="mailto:hello@maak-corp.tn" class="btn btn-ghost-inverse"
-        >hello@maak-corp.tn</a
-      >
+      <CalButton class="btn btn-ghost-inverse">Schedule a call</CalButton>
     </Fragment>
   </PosterBanner>
 

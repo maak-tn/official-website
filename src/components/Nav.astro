@@ -1,4 +1,6 @@
 ---
+import CalButton from "./CalButton.astro";
+
 const links = [
   { href: "#capabilities", label: "Capabilities" },
   { href: "#rates", label: "Rates", current: true },
@@ -22,6 +24,6 @@ const links = [
         </a>
       ))
     }
-    <a href="#rates" class="btn btn-primary">Check availability</a>
+    <CalButton>Check availability</CalButton>
   </div>
 </nav>
