@@ -101,10 +101,6 @@ body {
 		@apply bg-accent-100 text-accent-800;
 	}
 
-	.hr {
-		@apply h-0.5 border-0 bg-divider;
-	}
-
 	.kicker {
 		@apply block text-[13px] uppercase tracking-label text-accent-700;
 	}
