@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Container from "../components/Container.astro";
 import Nav from "../components/Nav.astro";
 import WorkList from "../components/WorkList.astro";
+import WorkDemos from "../components/WorkDemos.astro";
 import PosterBanner from "../components/PosterBanner.astro";
 import CalButton from "../components/CalButton.astro";
 import Footer from "../components/Footer.astro";
@@ -10,7 +11,7 @@ import Footer from "../components/Footer.astro";
 
 <Layout
   title="Work — MAAK CORP"
-  description="Products designed and built by MAAK CORP: VAGA, Planifi and GitHub Groups."
+  description="Products designed and built by MAAK CORP: VAGA, Planifi and GitHub Groups, plus self-initiated quote-configurator demos."
 >
   <Nav current="work" />
 
@@ -29,6 +30,7 @@ import Footer from "../components/Footer.astro";
     </section>
 
     <WorkList />
+    <WorkDemos />
 
     <div class="mb-18 border-2 border-divider px-8 py-10">
       <span class="kicker">Starting from scratch?</span>

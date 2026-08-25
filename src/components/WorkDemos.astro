@@ -1,0 +1,95 @@
+---
+interface Demo {
+  title: string;
+  description: string;
+  tags: string[];
+  href?: string;
+}
+
+const demos: Demo[] = [
+  {
+    title: "Aluminium joinery",
+    description:
+      "Windows, pleated screens, roller shutters and alu kitchens. Product, dimensions, model and finish resolve to an indicative price before the enquiry is sent.",
+    tags: ["Dimensioned pricing", "4 product lines"],
+    href: "https://alum.maak-corp.tn",
+  },
+  {
+    title: "Garage doors & metal shutters",
+    description:
+      "Door type, opening, motorisation and dimensions, collected in order. The heaviest of the four on options, and the one that most needs the spec pinned down before a site visit.",
+    tags: ["Option matrix", "Site-visit brief"],
+    href: "https://garage.maak-corp.tn",
+  },
+  {
+    title: "Cleaning & floor restoration",
+    description:
+      "Service type, surface area, current condition and location — plus a photo upload step, because chasing job-site pictures is where this trade actually loses its hours.",
+    tags: ["Media capture", "Estimate range"],
+    href: "https://ultraclean.maak-corp.tn",
+  },
+  {
+    title: "Print shop",
+    description:
+      "Format, stock, finish and run length, priced against quantity breaks so the customer sees what ordering more actually saves them.",
+    tags: ["Quantity breaks", "Live pricing"],
+    href: "https://print.maak-corp.tn",
+  },
+];
+---
+
+<section aria-label="Concept demos" class="py-18">
+  <span class="kicker">Concept demos</span>
+  <p class="mb-4 max-w-[68ch] text-base leading-7">
+    Small businesses that quote by hand — over WhatsApp, DM or phone — lose hours to the same
+    exchange: what size, what finish, what condition, where. These are four takes on one fix: a
+    short configurator that turns a vague enquiry into a structured, priced brief before anyone
+    replies.
+  </p>
+  <p class="mb-10 max-w-[68ch] text-[15px] leading-6 text-text/70">
+    Self-initiated and unbranded — built to test the pattern across trades, not commissioned by a
+    client. Vanilla HTML, CSS and JavaScript, no backend, no database.
+  </p>
+
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4">
+    {
+      demos.map((demo) => (
+        <div class="card">
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+            <p class="card-title">{demo.title}</p>
+            {demo.href && (
+              <a
+                href={demo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-extrabold text-accent hover:underline"
+                data-posthog-event="demo_visited"
+                data-demo-name={demo.title}
+              >
+                Try it ↗
+              </a>
+            )}
+          </div>
+          <p class="card-body">{demo.description}</p>
+          <div class="mt-1 flex flex-wrap gap-1.5">
+            {demo.tags.map((tag) => (
+              <span class="tag tag-outline">{tag}</span>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  document
+    .querySelectorAll<HTMLAnchorElement>('[data-posthog-event="demo_visited"]')
+    .forEach((link) => {
+      link.addEventListener("click", () => {
+        window.posthog?.capture("demo_visited", {
+          demo_name: link.dataset.demoName,
+        });
+      });
+    });
+</script>
