@@ -11,10 +11,13 @@ const links = [
   { href: "/work", id: "work", label: "Work" },
   { href: "/#rates", id: "rates", label: "Rates" },
   { href: "/#about", id: "about", label: "About" },
+  { href: "/testimonials", id: "testimonials", label: "Testimonials" },
 ];
 ---
 
-<nav class="border-b border-divider sticky top-0 z-50 bg-white/60 backdrop-blur-xl">
+<nav
+  class="border-b border-divider sticky top-0 z-50 bg-white/60 backdrop-blur-xl"
+>
   <div class="mx-auto flex max-w-300 items-center gap-x-6 px-6 py-3">
     <a class="mr-auto font-extrabold text-lg hover:text-accent" href="/"
       >MAAK CORP</a
@@ -55,7 +58,7 @@ const links = [
         stroke-width="2"
         stroke-linecap="round"
       >
-        <path d="M2 5h16M2 10h16M2 15h16" />
+        <path d="M2 5h16M2 10h16M2 15h16"></path>
       </svg>
       <svg
         id="nav-icon-close"
@@ -68,7 +71,7 @@ const links = [
         stroke-linecap="round"
         class="hidden"
       >
-        <path d="M4 4l12 12M16 4L4 16" />
+        <path d="M4 4l12 12M16 4L4 16"></path>
       </svg>
     </button>
   </div>
@@ -88,7 +91,8 @@ const links = [
         </a>
       ))
     }
-    <CalButton class="btn btn-primary mt-3 w-full">Check availability</CalButton>
+    <CalButton class="btn btn-primary mt-3 w-full">Check availability</CalButton
+    >
   </div>
 </nav>
 

@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import Nav from "../components/Nav.astro";
+
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Work — MAAK CORP"
+  description="Products designed and built by MAAK CORP: VAGA, Planifi and GitHub Groups."
+>
+  <Nav current="work" />
+
+  <Container>
+    <section class="pt-28 pb-18">
+      <span class="kicker">TESTIMONIALS</span>
+      <h1
+        class="ml-[-0.03em] max-w-[24ch] text-[clamp(34px,4.4vw,56px)] leading-[1.08] tracking-tightest font-extrabold"
+      >
+        Proof of work. Words from our partners.
+      </h1>
+      <p class="mt-8 max-w-[58ch] text-[19px] leading-8">
+        Unfiltered feedback from the agencies and founders who rely on our
+        engineering capacity to ship on time.
+      </p>
+
+      <section>
+        <iframe
+          id="testimonialto-8d99f259-eff7-4f43-8b29-793fc62d0d2b"
+          src="https://embed-v2.testimonial.to/w/maak-corp-website?id=8d99f259-eff7-4f43-8b29-793fc62d0d2b"
+          frameborder="0"
+          scrolling="no"
+          width="100%"
+          height="800px"></iframe>
+      </section>
+    </section>
+
+    <Container>
+      <Footer />
+    </Container>
+  </Container>
+</Layout>
