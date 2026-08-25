@@ -50,6 +50,8 @@ const items: WorkItem[] = [
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-ghost"
+            data-posthog-event="portfolio_visited"
+            data-portfolio-name={item.title}
           >
             Visit ↗
           </a>
@@ -73,3 +75,15 @@ const items: WorkItem[] = [
     ))
   }
 </section>
+
+<script>
+  document
+    .querySelectorAll<HTMLAnchorElement>('[data-posthog-event="portfolio_visited"]')
+    .forEach((link) => {
+      link.addEventListener("click", () => {
+        window.posthog?.capture("portfolio_visited", {
+          portfolio_name: link.dataset.portfolioName,
+        });
+      });
+    });
+</script>
