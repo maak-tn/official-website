@@ -1,0 +1,25 @@
+---
+import type { StackItem } from "../data/stack";
+
+interface Props {
+  item: StackItem;
+}
+const { item } = Astro.props;
+---
+
+<div class="flex w-20 flex-col items-center gap-2 text-center">
+  <div class="flex h-16 w-16 items-center justify-center bg-surface">
+    {
+      item.path ? (
+        <svg viewBox="0 0 24 24" class="h-7 w-7 text-text/75" fill="currentColor" aria-hidden="true">
+          <path d={item.path} />
+        </svg>
+      ) : (
+        <span class="text-xs font-extrabold tracking-wide text-text/60" aria-hidden="true">
+          {item.fallback}
+        </span>
+      )
+    }
+  </div>
+  <span class="text-[11px] leading-tight text-text/70">{item.label}</span>
+</div>

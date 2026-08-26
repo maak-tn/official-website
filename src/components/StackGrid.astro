@@ -1,0 +1,19 @@
+---
+import { stackClusters } from "../data/stack";
+import StackTile from "./StackTile.astro";
+---
+
+<section aria-label="Stack" class="py-18">
+  <span class="kicker">Stack</span>
+  <div class="flex flex-col gap-8 w-fit mx-auto">
+    {
+      stackClusters.map((cluster) => (
+        <div class="flex flex-wrap gap-x-6 gap-y-6">
+          {cluster.items.map((item) => (
+            <StackTile item={item} />
+          ))}
+        </div>
+      ))
+    }
+  </div>
+</section>
