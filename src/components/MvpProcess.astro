@@ -8,7 +8,7 @@ const steps = [
   {
     n: "02",
     title: "Build",
-    body: "The product gets built against that brief and deployed to a staging environment from the first week — no single \"big reveal\" at the end.",
+    body: 'The product gets built against that brief and deployed to a staging environment from the first week, no single "big reveal" at the end.',
   },
   {
     n: "03",
@@ -18,7 +18,7 @@ const steps = [
   {
     n: "04",
     title: "Launch and handover",
-    body: "Production deployment, a short handover call, and the repository — yours, not held hostage.",
+    body: "Production deployment, a short handover call, and the repository, yours, not held hostage.",
   },
 ];
 ---
@@ -34,8 +34,12 @@ const steps = [
         ]}
       >
         <div class="flex items-baseline gap-3 md:contents">
-          <p class="text-[15px] leading-7 tabular-nums font-extrabold">{step.n}</p>
-          <h3 class="text-2xl leading-7 tracking-heading font-extrabold">{step.title}</h3>
+          <p class="text-[15px] leading-7 tabular-nums font-extrabold">
+            {step.n}
+          </p>
+          <h3 class="text-2xl leading-7 tracking-heading font-extrabold">
+            {step.title}
+          </h3>
         </div>
         <p class="max-w-[52ch] text-base leading-7 text-text/78">{step.body}</p>
       </div>

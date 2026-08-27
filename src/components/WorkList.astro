@@ -12,7 +12,7 @@ const items: WorkItem[] = [
     title: "VAGA Suite",
     href: "https://vaga.tn",
     description:
-      "An all-in-one ERP for Tunisian SMEs: quotes, orders, delivery notes, invoicing, stock and treasury in one place. A quote becomes an order, then a delivery note, then an invoice, without re-entering anything — stock and treasury update themselves as it moves. Built-in TEIF compliance handles electronic invoicing without the last-minute scramble around the regulation.",
+      "An all-in-one ERP for Tunisian SMEs: quotes, orders, delivery notes, invoicing, stock and treasury in one place. A quote becomes an order, then a delivery note, then an invoice, without re-entering anything, stock and treasury update themselves as it moves. Built-in TEIF compliance handles electronic invoicing without the last-minute scramble around the regulation.",
     tags: ["ERP", "SaaS", "Invoicing"],
     techStack: ["Angular", "NestJS", "Supabase"],
   },
@@ -20,7 +20,7 @@ const items: WorkItem[] = [
     title: "Planifi",
     href: "https://planifi.tn",
     description:
-      "Tender-management software for procurement teams, shipped as SaaS or self-hosted. Projects, documents and tender acquisition live in one system — Gantt, Kanban and calendar views, version-controlled document sharing, and a Chrome extension that pulls in new tenders as they're published.",
+      "Tender-management software for procurement teams, shipped as SaaS or self-hosted. Projects, documents and tender acquisition live in one system, Gantt, Kanban and calendar views, version-controlled document sharing, and a Chrome extension that pulls in new tenders as they're published.",
     tags: ["SaaS", "Tender management", "Bidding"],
     techStack: ["Angular", "NestJS", "MySQL", "Docker"],
   },
@@ -28,7 +28,7 @@ const items: WorkItem[] = [
     title: "GitHub Groups",
     href: "https://ghg.tn",
     description:
-      "A Chrome extension that adds custom repository grouping to GitHub — by client, stack or project phase — with fast search across every group. Built because GitHub still doesn't ship the organising feature its own users keep asking for.",
+      "A Chrome extension that adds custom repository grouping to GitHub, by client, stack or project phase, with fast search across every group. Built because GitHub still doesn't ship the organising feature its own users keep asking for.",
     tags: ["Chrome extension", "Developer tools"],
     techStack: ["TypeScript", "HTML", "CSS"],
   },
@@ -78,7 +78,9 @@ const items: WorkItem[] = [
 
 <script>
   document
-    .querySelectorAll<HTMLAnchorElement>('[data-posthog-event="portfolio_visited"]')
+    .querySelectorAll<HTMLAnchorElement>(
+      '[data-posthog-event="portfolio_visited"]',
+    )
     .forEach((link) => {
       link.addEventListener("click", () => {
         window.posthog?.capture("portfolio_visited", {

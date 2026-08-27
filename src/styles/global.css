@@ -1,10 +1,10 @@
 @import 'tailwindcss';
 
-/* Archivo — the only typeface. 400 for body, 800 for headings/display. */
+/* Archivo, the only typeface. 400 for body, 800 for headings/display. */
 @import '@fontsource/archivo/400.css';
 @import '@fontsource/archivo/800.css';
 
-/* ── Design tokens — ported from the "Modernist" design system ──────────
+/* ── Design tokens, ported from the "Modernist" design system ──────────
    Every color, and the tracking values used by headings/labels, comes
    from here. Tailwind's default spacing scale (p-1 = 4px, p-8 = 32px…)
    already matches the system's --space-* values, so it isn't redefined. */
