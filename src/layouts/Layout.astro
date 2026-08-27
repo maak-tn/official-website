@@ -18,8 +18,16 @@ const {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" media="(prefers-color-scheme: dark)" href="/logo_white.png" />
-    <link rel="icon" media="(prefers-color-scheme: light)" href="/logo_dark.png" />
+    <link
+      rel="icon"
+      media="(prefers-color-scheme: dark)"
+      href="/logo_white.png"
+    />
+    <link
+      rel="icon"
+      media="(prefers-color-scheme: light)"
+      href="/logo_dark.png"
+    />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
@@ -42,7 +50,7 @@ const {
             if (!cal.loaded) {
               cal.ns = {};
               cal.q = cal.q || [];
-              d.head.appendChild(d.createElement('script')).src = A;
+              d.head.appendChild(d.createElement("script")).src = A;
               cal.loaded = true;
             }
             if (ar[0] === L) {
@@ -51,22 +59,22 @@ const {
               };
               const namespace = ar[1];
               api.q = api.q || [];
-              if (typeof namespace === 'string') {
+              if (typeof namespace === "string") {
                 cal.ns[namespace] = cal.ns[namespace] || api;
                 p(cal.ns[namespace], ar);
-                p(cal, ['initNamespace', namespace]);
+                p(cal, ["initNamespace", namespace]);
               } else p(cal, ar);
               return;
             }
             p(cal, ar);
           };
-      })(window, 'https://app.cal.com/embed/embed.js', 'init');
-      Cal('init', 'intro', { origin: 'https://cal.com' });
-      Cal.ns.intro('ui', {
-        theme: 'light',
-        styles: { branding: { brandColor: '#ec3013' } },
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "intro", { origin: "https://cal.com" });
+      Cal.ns.intro("ui", {
+        theme: "light",
+        styles: { branding: { brandColor: "#ec3013" } },
         hideEventTypeDetails: false,
-        layout: 'month_view',
+        layout: "month_view",
       });
     </script>
   </head>
